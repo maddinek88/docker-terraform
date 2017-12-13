@@ -3,7 +3,8 @@
 DOCKER_IMAGE='broadinstitute/terraform:latest'
 SUDO=
 
-SCRIPT_DIR="$( cd -P "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
+#SCRIPT_DIR="$( cd -P "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
+SCRIPT_DIR="$(ls -l /usr/local/bin/terraform.sh | sed 's/^.* -> //' | sed 's/\..*//')"
 source "${SCRIPT_DIR}/config.sh"
 
 usage() {
@@ -13,14 +14,6 @@ usage() {
 
 if [ "$TERM" != "dumb" ] ; then
     TTY='-it'
-fi
-
-EXTRA_ENV=
-if [ -z "${ATLAS_TOKEN}" ]; then
-    echo "ATLAS_TOKEN has not been set."
-    exit 1
-else
-    EXTRA_ENV="-e ATLAS_TOKEN=${ATLAS_TOKEN}"
 fi
 
 if [ `uname -s` != "Darwin" ]; then
