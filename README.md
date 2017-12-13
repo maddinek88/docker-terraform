@@ -1,4 +1,4 @@
-# broadinstitute/docker-terraform
+# maddinek/docker-terraform
 [![](https://images.microbadger.com/badges/image/broadinstitute/terraform.svg)](http://microbadger.com/images/broadinstitute/terraform "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/broadinstitute/terraform.svg)](https://hub.docker.com/r/broadinstitute/terraform/)
 [![Docker Hub](http://img.shields.io/docker/pulls/broadinstitute/terraform.svg)](https://hub.docker.com/r/broadinstitute/terraform/)
@@ -18,6 +18,15 @@ This Docker image is based on the official [Alpine][2] 3.2 base image.
 ## Terraform configuration files
 
 This container expects the user to mount in a directory, which will be mapped to the `/data` directory inside the container.  This is the directory from which [Terraform][1] is configured to read the configuration files referenced by the commands you call.
+
+## Adopt the Terraform Version
+
+### Change the Terraform Version in the Dockerfile (currently 0.11.1)
+
+```
+ENV TERRAFORM_VERSION=0.11.1
+```
+
 
 ## Getting started
 
