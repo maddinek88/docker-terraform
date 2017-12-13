@@ -21,12 +21,16 @@ This container expects the user to mount in a directory, which will be mapped to
 
 ## Getting started
 
-```
-Build the container: docker build -t terraform .
-```
+### Build the container
 
 ```
-Set up the symlink running: bash install.sh
+docker build -t terraform .
+```
+
+### Set up the symlink
+
+```
+bash install.sh
 ```
 
 ## How to run this image
