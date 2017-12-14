@@ -36,10 +36,16 @@ ENV TERRAFORM_VERSION=0.11.1
 docker build -t terraform .
 ```
 
-### Set up the symlink
+### Set up the symlink (MacOS)
 
 ```
 bash install.sh
+```
+
+### Set up the symlink (other)
+
+```
+just make the terraform.sh global reachable.
 ```
 
 ## How to run this image
