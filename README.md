@@ -135,11 +135,11 @@ terraform.sh version
 ### alternative usage
 
 ```
-docker run -it --rm broadinstitute/terraform [--version] [--help] <command> [<args>]
+docker run -it --rm maddinek/terraform [--version] [--help] <command> [<args>]
 ```
 
 ```
-docker run -it --rm -v /etc/ssl/certs:/etc/ssl/certs:ro --net=host broadinstitute/terraform [--version] [--help] <command> [<args>]
+docker run -it --rm -v /etc/ssl/certs:/etc/ssl/certs:ro --net=host maddinek/terraform [--version] [--help] <command> [<args>]
 ```
 
 [1]: http://www.terraform.io/ "Terraform"
