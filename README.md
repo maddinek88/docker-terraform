@@ -45,7 +45,7 @@ bash install.sh
 ### Set up the symlink (other)
 
 ```
-just make the terraform.sh global reachable.
+just make the terraform.sh globally reachable.
 ```
 
 ## How to run this image
